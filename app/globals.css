@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-barlow: 'Barlow', sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #080d1a;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hero grid background */
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(45, 127, 249, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 127, 249, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
