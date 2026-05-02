@@ -18,11 +18,6 @@ html {
   background-color: var(--bg);
 }
 
-@media (min-width: 1440px) {
-  html {
-    zoom: 1.25;
-  }
-}
 
 body {
   overflow-x: hidden;
@@ -63,6 +58,34 @@ body {
 .badge-dot-pulse {
   animation: badge-pulse 2s ease-in-out infinite;
 }
+
+/* Floating background blobs */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(120px, -100px) scale(1.1); }
+  50% { transform: translate(-60px, 120px) scale(0.9); }
+  75% { transform: translate(100px, 60px) scale(1.05); }
+}
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-100px, 80px) scale(1.15); }
+  50% { transform: translate(90px, -120px) scale(0.85); }
+  75% { transform: translate(-80px, -50px) scale(1.1); }
+}
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(70px, 100px) scale(1.1); }
+  50% { transform: translate(-120px, -60px) scale(0.9); }
+  75% { transform: translate(60px, -90px) scale(1.15); }
+}
+@keyframes color-shift {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 0.6; }
+  66% { opacity: 1.2; }
+}
+.bg-blob-1 { animation: float-1 25s ease-in-out infinite, color-shift 8s ease-in-out infinite; }
+.bg-blob-2 { animation: float-2 30s ease-in-out infinite, color-shift 10s ease-in-out infinite 3s; }
+.bg-blob-3 { animation: float-3 22s ease-in-out infinite, color-shift 12s ease-in-out infinite 6s; }
 
 /* Custom cursor — blue dot */
 * {

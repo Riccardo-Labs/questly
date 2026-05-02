@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { hero, heroWidgetItems, serviceDetails } from '@/lib/content'
 import ServiceSidebar from '@/components/ui/ServiceSidebar'
+import VantaBackground from '@/components/ui/VantaBackground'
 
 /* ── ServicesWidget ───────────────────────────────────────────────────────── */
 
@@ -17,12 +18,12 @@ function ServicesWidget({
   onServiceClick: (index: number) => void
 }) {
   return (
-    <div className="relative rounded-[20px] border border-[rgba(99,130,255,0.12)] bg-[#0d1120] p-6 overflow-hidden">
+    <div className="relative rounded-[20px] border border-[rgba(99,130,255,0.22)] bg-[#0d1120] p-6 overflow-hidden h-full flex flex-col">
       {/* Scanline */}
       <div className="scanline" />
 
       {/* Title bar */}
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-center gap-3 pb-5 mb-5 border-b border-[rgba(99,130,255,0.12)] -mx-6 px-6">
         <div className="flex gap-1.5">
           <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
           <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/80" />
@@ -32,7 +33,7 @@ function ServicesWidget({
       </div>
 
       {/* Service items */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         {heroWidgetItems.map((s, i) => {
           const isActive = i === activeIndex
           return (
@@ -54,14 +55,14 @@ function ServicesWidget({
                   <p className="font-mono text-[11px] text-[rgba(180,195,255,0.5)] mt-0.5">{s.sub}</p>
                 </div>
               </div>
-              <span className="text-[#5c85ff] text-base opacity-60 shrink-0">›</span>
+              <span className="text-[#5c85ff] text-base opacity-60 shrink-0">&gt;</span>
             </button>
           )
         })}
       </div>
 
       {/* Status bar */}
-      <div className="flex items-center justify-between mt-5 pt-4 border-t border-[rgba(99,130,255,0.12)]">
+      <div className="flex items-center justify-between mt-5 pt-4 pb-1 border-t border-[rgba(99,130,255,0.12)] -mx-6 px-6">
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-green-400 shrink-0" />
           <span className="font-mono text-[11px] text-[rgba(180,195,255,0.5)]">Disponibile — prima consulenza gratuita</span>
@@ -78,16 +79,14 @@ export function Hero({ onContactOpen }: { onContactOpen: () => void }) {
 
   return (
     <>
-      <section className="relative min-h-[auto] overflow-hidden">
+      <section className="relative min-h-[auto] overflow-hidden [zoom:1.25]">
+        <VantaBackground />
         {/* Dot grid */}
         <div className="absolute inset-0 hero-grid-bg pointer-events-none" />
 
-        {/* Orb */}
-        <div className="fixed top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(61,106,255,0.15)_0%,transparent_70%)] pointer-events-none z-0" />
-
         {/* Content */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-[clamp(1.5rem,5vw,6rem)] pt-[136px] pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,4vw,5rem)] items-center">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-[clamp(1.5rem,5vw,6rem)] pt-[95px] pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,4vw,5rem)] items-start">
 
             {/* Left */}
             <motion.div
@@ -95,13 +94,19 @@ export function Hero({ onContactOpen }: { onContactOpen: () => void }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="mb-8">{hero.badge}</Badge>
+              <Badge className="mb-5">{hero.badge}</Badge>
 
               <h1
                 className="font-sans font-bold leading-[1.02] tracking-[-0.04em] mb-6"
                 style={{ fontSize: 'clamp(2.5rem, 6vw, 84px)' }}
               >
                 {hero.headlinePart1}
+                {hero.headlinePart2 && (
+                  <>
+                    <br />
+                    {hero.headlinePart2}
+                  </>
+                )}
                 {hero.headlineAccent && (
                   <>
                     <br />
@@ -136,11 +141,11 @@ export function Hero({ onContactOpen }: { onContactOpen: () => void }) {
               <div className="flex flex-wrap gap-4">
                 {hero.ctas.map(cta =>
                   cta.variant === 'primary' ? (
-                    <Button key={cta.label} variant="primary" onClick={onContactOpen}>
+                    <Button key={cta.label} variant="primary" onClick={onContactOpen} className="!py-2.5 !px-5 !text-sm">
                       {cta.label}
                     </Button>
                   ) : (
-                    <Button key={cta.label} variant="secondary" href={cta.href}>
+                    <Button key={cta.label} variant="secondary" href={cta.href} className="!py-2.5 !px-5 !text-sm">
                       {cta.label}
                     </Button>
                   )
@@ -150,7 +155,7 @@ export function Hero({ onContactOpen }: { onContactOpen: () => void }) {
 
             {/* Right — hidden on mobile */}
             <motion.div
-              className="hidden lg:block"
+              className="hidden lg:flex lg:flex-col"
               initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}

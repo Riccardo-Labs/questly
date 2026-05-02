@@ -22,6 +22,7 @@ export interface HeroCta {
 export interface HeroContent {
   badge: string
   headlinePart1: string
+  headlinePart2?: string
   headlineAccent: string
   sub: string
   bullets: HeroBullet[]

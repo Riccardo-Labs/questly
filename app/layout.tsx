@@ -42,8 +42,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it" className={`${spaceGrotesk.variable} ${jetbrains.variable}`}>
       <body className="bg-bg text-text font-sans antialiased">
+        {/* Animated background blobs */}
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+          <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-[rgba(61,106,255,0.18)] blur-[120px] bg-blob-1" />
+          <div className="absolute top-[40%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[rgba(61,106,255,0.14)] blur-[140px] bg-blob-2" />
+          <div className="absolute bottom-[-5%] left-[30%] w-[550px] h-[550px] rounded-full bg-[rgba(99,130,255,0.16)] blur-[130px] bg-blob-3" />
+        </div>
         <Navbar />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

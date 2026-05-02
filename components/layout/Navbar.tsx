@@ -12,9 +12,10 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 h-[68px] flex items-center justify-between px-12 bg-[rgba(6,8,15,0.7)] backdrop-blur-[16px] border-b border-[rgba(99,130,255,0.12)]">
+      <header className="fixed top-0 left-0 right-0 z-40 h-[68px] bg-[rgba(6,8,15,0.7)] backdrop-blur-[16px] border-b border-[rgba(99,130,255,0.12)]">
+        <div className="max-w-[1720px] mx-auto px-[clamp(1.5rem,5vw,6rem)] h-full flex items-center justify-between">
         <Link href="/" aria-label="Questly home">
-          <Logo height={36} />
+          <Logo height={50} />
         </Link>
 
         {/* Desktop nav */}
@@ -24,19 +25,13 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-mono text-[14px] text-[rgba(180,195,255,0.5)] hover:text-[#e8ecff] transition-colors"
+                  className="font-mono text-[17px] text-[rgba(180,195,255,0.5)] hover:text-[#e8ecff] transition-colors"
                 >
                   {'// ' + link.label.toLowerCase()}
                 </a>
               </li>
             ))}
           </ul>
-          <button
-            onClick={() => setModalOpen(true)}
-            className="bg-[#3d6aff] text-white px-[22px] py-[10px] rounded-lg text-[14px] font-semibold hover:bg-[#2952cc] transition-colors border border-[rgba(99,130,255,0.3)] shadow-[0_0_20px_rgba(61,106,255,0.4)]"
-          >
-            {nav.cta}
-          </button>
         </nav>
 
         {/* Mobile hamburger */}
@@ -56,6 +51,7 @@ export function Navbar() {
             </>
           )}
         </button>
+        </div>
       </header>
 
       {/* Mobile menu */}

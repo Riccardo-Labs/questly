@@ -25,7 +25,8 @@ export const nav: NavContent = {
 
 export const hero: HeroContent = {
   badge: 'Soluzioni digitali per PMI e imprenditori italiani',
-  headlinePart1: 'Il tuo partner',
+  headlinePart1: 'Il tuo',
+  headlinePart2: 'partner',
   headlineAccent: 'digitale.',
   sub: '',
   bullets: [
@@ -206,7 +207,7 @@ export const whyQuestly: WhyContent = {
 
 export const ctaBanner: CtaBannerContent = {
   headline: 'Parlaci del tuo progetto.',
-  sub: 'Una chiamata di 30 minuti. Gratuita. Senza impegno.',
+  sub: 'Una chiamata di 30 minuti. Senza impegno.',
   cta: 'Scrivici ora →',
 }
 
