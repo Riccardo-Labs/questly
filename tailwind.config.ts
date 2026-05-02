@@ -9,23 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#080d1a',
-        bg2: '#0d1628',
+        bg: '#06080f',
+        bg2: '#0d1120',
         bg3: '#111c35',
-        blue: '#2d7ff9',
-        'blue-dark': '#1a5fd4',
-        'blue-glow': 'rgba(45,127,249,0.15)',
-        text: '#e8edf8',
-        muted: '#8a96b0',
-        subtle: 'rgba(255,255,255,0.07)',
-        accent: 'rgba(45,127,249,0.3)',
+        blue: '#3d6aff',
+        'blue-bright': '#5c85ff',
+        'blue-dark': '#2952cc',
+        'blue-glow': 'rgba(61,106,255,0.35)',
+        text: '#e8ecff',
+        muted: 'rgba(180,195,255,0.5)',
+        subtle: 'rgba(99,130,255,0.12)',
+        accent: 'rgba(61,106,255,0.4)',
       },
       borderColor: {
-        subtle: 'rgba(255,255,255,0.07)',
-        accent: 'rgba(45,127,249,0.3)',
+        subtle: 'rgba(99,130,255,0.12)',
+        accent: 'rgba(61,106,255,0.4)',
       },
       fontFamily: {
-        sans: ['var(--font-barlow)', 'sans-serif'],
+        sans: ['var(--font-space-grotesk)', 'sans-serif'],
         mono: ['var(--font-jetbrains)', 'monospace'],
       },
       keyframes: {

@@ -140,3 +140,28 @@ export interface ContactFormData {
   email: string
   messaggio: string
 }
+
+export interface ServiceFeature {
+  icon: string
+  title: string
+  text: string
+}
+
+export interface ServiceStat {
+  val: string
+  lbl: string
+}
+
+export interface ServiceData {
+  tag: string
+  title: string
+  desc: string
+  features: ServiceFeature[]
+  stats: ServiceStat[]
+}
+
+export interface WidgetItem {
+  num: string
+  title: string
+  sub: string
+}

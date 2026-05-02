@@ -3,23 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --font-barlow: 'Barlow', sans-serif;
-  --font-jetbrains: 'JetBrains Mono', monospace;
+  --bg: #06080f;
+  --surface: #0d1120;
+  --border: rgba(99, 130, 255, 0.12);
+  --blue: #3d6aff;
+  --blue-bright: #5c85ff;
+  --blue-glow: rgba(61, 106, 255, 0.35);
+  --text: #e8ecff;
+  --muted: rgba(180, 195, 255, 0.5);
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #080d1a;
+  background-color: var(--bg);
+}
+
+@media (min-width: 1440px) {
+  html {
+    zoom: 1.25;
+  }
 }
 
 body {
   overflow-x: hidden;
 }
 
-/* Hero grid background */
+/* Dot grid background */
 .hero-grid-bg {
-  background-image:
-    linear-gradient(rgba(45, 127, 249, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(45, 127, 249, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background-image: radial-gradient(circle, rgba(99, 130, 255, 0.18) 1px, transparent 1px);
+  background-size: 36px 36px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 60% 40%, black 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 80% at 60% 40%, black 20%, transparent 80%);
+}
+
+/* Scanline animation */
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(61, 106, 255, 0.3), transparent);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+}
+
+/* Badge pulse dot */
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.badge-dot-pulse {
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+/* Custom cursor — blue dot */
+* {
+  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='12' cy='12' r='10' fill='none' stroke='%233d6aff' stroke-width='1' opacity='0.2'/><circle cx='12' cy='12' r='4.5' fill='%233d6aff'/><circle cx='10.5' cy='10.5' r='2.8' fill='%235c85ff' opacity='0.7'/></svg>") 12 12, crosshair;
+}
+
+a, button, [role="button"], select, summary {
+  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='12' cy='12' r='10' fill='none' stroke='%233d6aff' stroke-width='1.5' opacity='0.45'/><circle cx='12' cy='12' r='5.5' fill='%233d6aff'/><circle cx='10.5' cy='10.5' r='3.2' fill='%235c85ff' opacity='0.7'/></svg>") 12 12, pointer;
 }
