@@ -20,7 +20,7 @@ export const nav: NavContent = {
     { label: 'Come lavoriamo', href: '#come-lavoriamo' },
     { label: 'FAQ', href: '#faq' },
   ],
-  cta: 'Richiedi una consulenza',
+  cta: 'Contattaci',
 }
 
 export const hero: HeroContent = {

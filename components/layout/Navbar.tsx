@@ -20,7 +20,7 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navigazione principale">
-          <ul className="flex gap-8 list-none">
+          <ul className="flex gap-8 list-none mr-6">
             {nav.links.map(link => (
               <li key={link.href}>
                 <a
@@ -32,6 +32,12 @@ export function Navbar() {
               </li>
             ))}
           </ul>
+          <button
+            onClick={() => setModalOpen(true)}
+            className="bg-[#3d6aff] text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-[#2952cc] transition-colors"
+          >
+            {nav.cta}
+          </button>
         </nav>
 
         {/* Mobile hamburger */}

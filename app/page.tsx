@@ -8,7 +8,6 @@ import { Solution } from '@/components/sections/Solution'
 import { Services } from '@/components/sections/Services'
 import { HowWeWork } from '@/components/sections/HowWeWork'
 import { WhyQuestly } from '@/components/sections/WhyQuestly'
-import { CtaBanner } from '@/components/sections/CtaBanner'
 import { Faq } from '@/components/sections/Faq'
 import { FinalCta } from '@/components/sections/FinalCta'
 import { ContactModal } from '@/components/ui/ContactModal'
@@ -27,7 +26,6 @@ export default function Page() {
       <Services />
       <HowWeWork />
       <WhyQuestly onContactOpen={open} />
-      <CtaBanner onContactOpen={open} />
       <Faq />
       <FinalCta onContactOpen={open} />
       <ContactModal isOpen={modalOpen} onClose={close} />
