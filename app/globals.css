@@ -87,11 +87,7 @@ body {
 .bg-blob-2 { animation: float-2 30s ease-in-out infinite, color-shift 10s ease-in-out infinite 3s; }
 .bg-blob-3 { animation: float-3 22s ease-in-out infinite, color-shift 12s ease-in-out infinite 6s; }
 
-/* Custom cursor — blue dot */
-* {
-  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='12' cy='12' r='10' fill='none' stroke='%233d6aff' stroke-width='1' opacity='0.2'/><circle cx='12' cy='12' r='4.5' fill='%233d6aff'/><circle cx='10.5' cy='10.5' r='2.8' fill='%235c85ff' opacity='0.7'/></svg>") 12 12, crosshair;
-}
-
-a, button, [role="button"], select, summary {
-  cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><circle cx='12' cy='12' r='10' fill='none' stroke='%233d6aff' stroke-width='1.5' opacity='0.45'/><circle cx='12' cy='12' r='5.5' fill='%233d6aff'/><circle cx='10.5' cy='10.5' r='3.2' fill='%235c85ff' opacity='0.7'/></svg>") 12 12, pointer;
+/* Hide native cursor (custom JS cursor in CustomCursor.tsx) */
+@media (pointer: fine) {
+  * { cursor: none !important; }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import CustomCursor from '@/components/ui/CustomCursor'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="absolute top-[40%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[rgba(61,106,255,0.14)] blur-[140px] bg-blob-2" />
           <div className="absolute bottom-[-5%] left-[30%] w-[550px] h-[550px] rounded-full bg-[rgba(99,130,255,0.16)] blur-[130px] bg-blob-3" />
         </div>
+        <CustomCursor />
         <Navbar />
         <main className="relative z-10">{children}</main>
         <Footer />

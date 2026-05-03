@@ -27,7 +27,7 @@ const variantClasses: Record<Variant, string> = {
  * Varianti: primary (blu), secondary (outline muted), white (su sfondi blu), outline (trasparente).
  */
 export function Button({ variant = 'primary', href, onClick, children, className = '', type = 'button' }: ButtonProps) {
-  const base = 'inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm cursor-pointer'
+  const base = 'inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm cursor-pointer'
   const classes = `${base} ${variantClasses[variant]} ${className}`
 
   if (href && !href.startsWith('#') && !href.startsWith('mailto')) {
