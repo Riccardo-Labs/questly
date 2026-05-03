@@ -129,9 +129,9 @@ export function Hero({ onContactOpen }: { onContactOpen: () => void }) {
                 {hero.sub}
               </p>
 
-              <ul className="flex flex-col gap-4 mb-16 list-none">
+              <ul className="flex flex-col gap-4 mb-12 list-none">
                 {hero.bullets.map(b => (
-                  <li key={b.num} className="flex items-center gap-4 text-[17px] font-medium text-[rgba(180,195,255,0.5)]">
+                  <li key={b.num} className="flex items-center gap-6 text-[15px] font-medium text-[rgba(180,195,255,0.5)]">
                     <span className="text-[#5c85ff] font-bold shrink-0">✓</span>
                     {b.text}
                   </li>
