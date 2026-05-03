@@ -47,8 +47,14 @@ export const hero: HeroContent = {
 }
 
 export const logos: string[] = [
-  'Next.js', 'React', 'FastAPI', 'Python', 'Make', 'n8n',
-  'OpenAI', 'Vercel', 'GA4', 'Google Ads', 'Meta Ads', 'WhatsApp Business',
+  'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Vite', 'Tailwind CSS', 'Bootstrap',
+  'Node.js', 'Express', 'FastAPI', 'Python', 'PHP', 'C#', 'Java', 'Golang',
+  'MongoDB', 'PostgreSQL',
+  'Kotlin', 'Swift',
+  'WordPress', 'Shopify', 'WooCommerce',
+  'Docker', 'AWS', 'Azure', 'Google Cloud', 'Firebase',
+  'Google Analytics', 'Google Search Console', 'Google Business Profile',
+  'Figma', 'Adobe XD',
 ]
 
 export const problems: Problem[] = [
@@ -252,7 +258,7 @@ export const finalCta: FinalCtaContent = {
 }
 
 export const footer: FooterContent = {
-  copyright: '© 2026 Questly — Soluzioni digitali per PMI italiane',
+  copyright: '© 2024 Questly — Soluzioni digitali per PMI italiane',
   links: [
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Cookie Policy', href: '/cookie' },

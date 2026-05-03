@@ -24,8 +24,8 @@ All copy lives in **`lib/content.ts`** as typed named exports (`hero`, `nav`, `s
 
 - `components/sections/` — one file per page section; each imports its content from `lib/content.ts`
 - `components/layout/` — `Navbar`, `Footer`
-- `components/ui/` — `Button`, `Badge`, `SectionLabel`, `ContactModal`, `Logo`
-- `components/ServiceSidebar.tsx` — uses a CSS Module (`ServiceSidebar.module.css`); exports `SERVICES` array alongside the default component
+- `components/ui/` — `Button`, `Badge`, `SectionLabel`, `ContactModal`, `Logo`, `ServiceSidebar`, `VantaBackground`
+- `ServiceSidebar` uses a CSS Module (`ServiceSidebar.module.css`); receives `service: ServiceData | null` via props, data comes from `lib/content.ts` (`serviceDetails`)
 
 ### Contact modal
 
@@ -47,7 +47,9 @@ Dark-only theme. Custom Tailwind tokens (defined in `tailwind.config.ts`):
 
 Fonts via CSS variables: `--font-space-grotesk` → `font-sans`, `--font-jetbrains` → `font-mono`.
 
-Custom CSS classes in `globals.css`: `hero-grid-bg` (dot grid), `scanline` (animated line), `badge-dot-pulse`.
+Custom CSS classes in `globals.css`: `hero-grid-bg` (dot grid), `scanline` (animated line inside ServicesWidget), `badge-dot-pulse`, `bg-blob-1/2/3` (floating animated blobs, global background in `layout.tsx`), custom SVG cursor.
+
+`VantaBackground` — Vanta.js NET effect (Three.js), rendered as `absolute` inside Hero section only. Deps: `vanta`, `three`.
 
 Custom Tailwind animations: `animate-blink`, `animate-marquee`, `animate-fade-up`.
 

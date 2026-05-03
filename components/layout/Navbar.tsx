@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-40 h-[68px] bg-[rgba(6,8,15,0.7)] backdrop-blur-[16px] border-b border-[rgba(99,130,255,0.12)]">
-        <div className="max-w-[1720px] mx-auto px-[clamp(1.5rem,5vw,6rem)] h-full flex items-center justify-between">
+        <div className="max-w-[1750px] mx-auto px-[clamp(1.875rem,6.25vw,7.5rem)] h-full flex items-center justify-between">
         <Link href="/" aria-label="Questly home">
           <Logo height={50} />
         </Link>
@@ -25,7 +25,7 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-mono text-[17px] text-[rgba(180,195,255,0.5)] hover:text-[#e8ecff] transition-colors"
+                  className="font-mono text-[15px] text-[rgba(180,195,255,0.5)] hover:text-[#e8ecff] transition-colors"
                 >
                   {'// ' + link.label.toLowerCase()}
                 </a>
