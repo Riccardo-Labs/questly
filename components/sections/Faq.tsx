@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import { Container } from '@/components/ui/Container'
 import { faq } from '@/lib/content'
 import type { FaqItem } from '@/types'
 
@@ -38,7 +39,8 @@ export function Faq() {
   const toggle = (i: number) => setOpenIdx(prev => (prev === i ? null : i))
 
   return (
-    <section id="faq" className="bg-bg px-[5%] py-24">
+    <section id="faq" className="bg-bg py-24">
+      <Container>
       <motion.div
         className="max-w-3xl mx-auto text-center"
         initial={{ opacity: 0, y: 24 }}
@@ -63,6 +65,7 @@ export function Faq() {
           ))}
         </div>
       </motion.div>
+      </Container>
     </section>
   )
 }

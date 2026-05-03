@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import { Container } from '@/components/ui/Container'
 import { solution } from '@/lib/content'
 import type { TerminalLine } from '@/types'
 
@@ -52,7 +53,8 @@ function Terminal() {
 /** Sezione "La Soluzione": lista features a sinistra, terminale animato a destra. Layout 2 colonne su desktop. */
 export function Solution() {
   return (
-    <section className="bg-bg2 px-[5%] py-24">
+    <section className="bg-bg2 py-24">
+      <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -93,6 +95,7 @@ export function Solution() {
           <Terminal />
         </motion.div>
       </div>
+      </Container>
     </section>
   )
 }

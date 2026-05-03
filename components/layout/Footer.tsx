@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
+import { Container } from '@/components/ui/Container'
 import { footer } from '@/lib/content'
 
 /** Footer con logo, copyright e link a Privacy/Cookie Policy. Layout row su desktop, colonna su mobile. */
 export function Footer() {
   return (
-    <footer className="bg-bg border-t border-subtle px-[5%] py-8 flex flex-col md:flex-row justify-between items-center gap-3">
+    <footer className="bg-bg border-t border-subtle py-8">
+      <Container className="flex flex-col md:flex-row justify-between items-center gap-3">
       <Logo height={24} className="text-white" />
       <p className="text-muted text-xs">{footer.copyright}</p>
       <div className="flex gap-4">
@@ -19,6 +21,7 @@ export function Footer() {
           </Link>
         ))}
       </div>
+      </Container>
     </footer>
   )
 }

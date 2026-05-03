@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import { Container } from '@/components/ui/Container'
 import { problems } from '@/lib/content'
 import type { Problem as ProblemType } from '@/types'
 
@@ -25,7 +26,8 @@ function ProblemCard({ item, index }: { item: ProblemType; index: number }) {
 /** Sezione "Il Problema": griglia 2x2 con i 4 pain point comuni delle PMI. */
 export function Problem() {
   return (
-    <section id="problema" className="px-[5%] py-24">
+    <section id="problema" className="py-24">
+      <Container>
       <SectionLabel>Il problema</SectionLabel>
       <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px] mb-4">
         Ti riconosci in una<br />di queste situazioni?
@@ -38,6 +40,7 @@ export function Problem() {
           <ProblemCard key={item.num} item={item} index={i} />
         ))}
       </div>
+      </Container>
     </section>
   )
 }

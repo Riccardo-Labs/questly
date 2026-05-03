@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import { Container } from '@/components/ui/Container'
 import { howWeWork } from '@/lib/content'
 import type { Step } from '@/types'
 
@@ -30,7 +31,8 @@ function StepCard({ step, index, isLast }: { step: Step; index: number; isLast: 
 /** Sezione "Come Lavoriamo": 4 step in sequenza orizzontale su desktop, verticale su mobile. */
 export function HowWeWork() {
   return (
-    <section id="come-lavoriamo" className="bg-bg2 px-[5%] py-24">
+    <section id="come-lavoriamo" className="bg-bg2 py-24">
+      <Container>
       <SectionLabel>{howWeWork.label}</SectionLabel>
       <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px] mb-14">
         {howWeWork.headline}
@@ -45,6 +47,7 @@ export function HowWeWork() {
           />
         ))}
       </div>
+      </Container>
     </section>
   )
 }

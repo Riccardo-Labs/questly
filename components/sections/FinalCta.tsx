@@ -2,12 +2,14 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
+import { Container } from '@/components/ui/Container'
 import { finalCta } from '@/lib/content'
 
 /** Sezione di chiusura pagina con headline e due CTA: modal contatto + link telefono. */
 export function FinalCta({ onContactOpen }: { onContactOpen: () => void }) {
   return (
-    <section className="bg-bg2 px-[5%] py-28 text-center">
+    <section className="bg-bg2 py-28 text-center">
+      <Container>
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,6 +31,7 @@ export function FinalCta({ onContactOpen }: { onContactOpen: () => void }) {
           </Button>
         </div>
       </motion.div>
+      </Container>
     </section>
   )
 }

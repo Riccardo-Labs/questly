@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { Button } from '@/components/ui/Button'
+import { Container } from '@/components/ui/Container'
 import { whyQuestly } from '@/lib/content'
 import type { WhyFeature } from '@/types'
 
@@ -20,7 +21,8 @@ function FeatureCard({ f }: { f: WhyFeature }) {
 /** Sezione "Perché Questly": testo descrittivo a sinistra, griglia 2x2 di feature card a destra. */
 export function WhyQuestly({ onContactOpen }: { onContactOpen: () => void }) {
   return (
-    <section id="perche" className="px-[5%] py-24">
+    <section id="perche" className="py-24">
+      <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -49,6 +51,7 @@ export function WhyQuestly({ onContactOpen }: { onContactOpen: () => void }) {
           ))}
         </motion.div>
       </div>
+      </Container>
     </section>
   )
 }
