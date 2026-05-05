@@ -5,7 +5,7 @@ function LogoList() {
   return (
     <>
       {logos.map(logo => (
-        <span key={logo} className="font-mono text-xs text-muted whitespace-nowrap opacity-50 px-8">
+        <span key={logo} className="font-mono text-xs text-muted whitespace-nowrap px-8">
           {logo}
         </span>
       ))}

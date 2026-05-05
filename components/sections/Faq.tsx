@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { SectionLabel } from '@/components/ui/SectionLabel'
+import { Badge } from '@/components/ui/Badge'
 import { Container } from '@/components/ui/Container'
 import { faq } from '@/lib/content'
 import type { FaqItem } from '@/types'
@@ -48,7 +48,7 @@ export function Faq() {
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.5 }}
       >
-        <SectionLabel className="justify-center">{faq.label}</SectionLabel>
+        <Badge className="mb-6">{faq.label}</Badge>
         <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px]">
           {faq.headline}
         </h2>

@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --bg: #06080f;
-  --surface: #0d1120;
+  --bg: #08102a;
+  --surface: #0e1a38;
   --border: rgba(99, 130, 255, 0.12);
   --blue: #3d6aff;
   --blue-bright: #5c85ff;
   --blue-glow: rgba(61, 106, 255, 0.35);
   --text: #e8ecff;
   --muted: rgba(180, 195, 255, 0.5);
+  --bg-light: #f8f9ff;
+  --surface-light: #ffffff;
+  --text-body: #0d1120;
+  --text-secondary: #4a5568;
+  --border-light: #e2e8f0;
 }
 
 html {

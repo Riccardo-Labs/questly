@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { SectionLabel } from '@/components/ui/SectionLabel'
+import { Badge } from '@/components/ui/Badge'
 import { Container } from '@/components/ui/Container'
 import { solution } from '@/lib/content'
 import type { TerminalLine } from '@/types'
@@ -62,7 +62,7 @@ export function Solution() {
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
         >
-          <SectionLabel>La soluzione</SectionLabel>
+          <Badge className="mb-6">La soluzione</Badge>
           <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px] mb-6">
             {solution.headline}
           </h2>

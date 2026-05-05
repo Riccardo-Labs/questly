@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#06080f',
-        bg2: '#0d1120',
-        bg3: '#111c35',
+        bg: '#08102a',
+        bg2: '#0e1a38',
+        bg3: '#162244',
         blue: '#3d6aff',
         'blue-bright': '#5c85ff',
         'blue-dark': '#2952cc',
@@ -20,6 +20,11 @@ const config: Config = {
         muted: 'rgba(180,195,255,0.5)',
         subtle: 'rgba(99,130,255,0.12)',
         accent: 'rgba(61,106,255,0.4)',
+        'bg-light': '#f8f9ff',
+        'surface-light': '#ffffff',
+        'text-body': '#0d1120',
+        'text-secondary': '#4a5568',
+        'border-light': '#e2e8f0',
       },
       borderColor: {
         subtle: 'rgba(99,130,255,0.12)',

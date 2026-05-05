@@ -24,8 +24,6 @@ export default function Page() {
       <Problem />
       <Solution />
       <Services />
-      <HowWeWork />
-      <WhyQuestly onContactOpen={open} />
       <Faq />
       <FinalCta onContactOpen={open} />
       <ContactModal isOpen={modalOpen} onClose={close} />

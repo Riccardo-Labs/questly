@@ -12,7 +12,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 h-[68px] bg-[rgba(6,8,15,0.7)] backdrop-blur-[16px] border-b border-[rgba(99,130,255,0.12)]">
+      <header className="fixed top-0 left-0 right-0 z-40 h-[68px] bg-[#08102a] border-b border-[rgba(99,130,255,0.12)]">
         <div className="max-w-[1750px] mx-auto px-[clamp(1.875rem,6.25vw,7.5rem)] h-full flex items-center justify-between">
         <Link href="/" aria-label="Questly home">
           <Logo height={50} />
@@ -25,7 +25,7 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-mono text-[15px] text-[rgba(180,195,255,0.5)] hover:text-[#e8ecff] transition-colors"
+                  className="font-mono text-[15px] text-[#b4c3ff] hover:text-[#5c85ff] transition-colors"
                 >
                   {'// ' + link.label.toLowerCase()}
                 </a>
@@ -62,7 +62,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="fixed top-[68px] left-0 right-0 z-30 bg-[#0d1120] border-b border-[rgba(99,130,255,0.12)] flex flex-col p-6 gap-4 md:hidden">
+        <div className="fixed top-[68px] left-0 right-0 z-30 bg-[#08102a] border-b border-[rgba(99,130,255,0.12)] flex flex-col p-6 gap-4 md:hidden">
           {nav.links.map(link => (
             <a
               key={link.href}
