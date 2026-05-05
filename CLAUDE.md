@@ -26,6 +26,9 @@ All copy lives in **`lib/content.ts`** as typed named exports (`hero`, `nav`, `s
 - `components/layout/` — `Navbar`, `Footer`
 - `components/ui/` — `Button`, `Badge`, `SectionLabel`, `ContactModal`, `Logo`, `ServiceSidebar`, `VantaBackground`, `CustomCursor`, `Container`
 - `ServiceSidebar` uses a CSS Module (`ServiceSidebar.module.css`); receives `service: ServiceData | null` via props, data comes from `lib/content.ts` (`serviceDetails`)
+- `Badge` has `variant?: 'dark' | 'light'` — use `variant="light"` on light-background sections
+- Sections use `Badge` (not `SectionLabel`) for section labels
+- `lucide-react` is installed and available
 
 ### Contact modal
 
@@ -33,17 +36,37 @@ State lives in `app/page.tsx`. Sections that need to open the modal receive an `
 
 ### Design system
 
-Dark-only theme. Custom Tailwind tokens (defined in `tailwind.config.ts`):
+Mixed dark/light theme — sections alternate. Custom Tailwind tokens (defined in `tailwind.config.ts`):
 
+**Dark tokens:**
 | Token | Value |
 |---|---|
-| `bg` | `#06080f` (page background) |
-| `bg2` | `#0d1120` (surface) |
-| `bg3` | `#111c35` (elevated surface) |
+| `bg` | `#08102a` (page background) |
+| `bg2` | `#0e1a38` (surface) |
+| `bg3` | `#162244` (elevated surface) |
 | `blue` | `#3d6aff` (primary accent) |
 | `text` | `#e8ecff` |
 | `muted` | `rgba(180,195,255,0.5)` |
 | `subtle` | `rgba(99,130,255,0.12)` (borders) |
+
+**Light tokens:**
+| Token | Value |
+|---|---|
+| `bg-light` | `#f8f9ff` (light section bg) |
+| `surface-light` | `#ffffff` (cards) |
+| `text-body` | `#0d1120` (primary text on light) |
+| `text-secondary` | `#4a5568` (secondary text on light) |
+| `border-light` | `#e2e8f0` (borders on light) |
+
+**Section themes (current order in `app/page.tsx`):**
+- Hero → dark
+- LogoBar → dark
+- Problem → **light** (`bg-bg-light`, `#f4f6fb` override)
+- Solution → **dark** (`bg-bg2`)
+- Services → **light** (`bg-bg-light`)
+- FinalCta → **dark** (`bg-bg2`)
+
+**`min-h-[90vh] flex flex-col justify-center`** applied to Problem, Solution, Services, Faq sections for consistent height across devices.
 
 Fonts via CSS variables: `--font-space-grotesk` → `font-sans`, `--font-jetbrains` → `font-mono`.
 
@@ -64,3 +87,15 @@ Custom Tailwind animations: `animate-blink`, `animate-marquee`, `animate-fade-up
 ### Button component
 
 `components/ui/Button.tsx` is smart about rendering: `next/link` for internal paths, `<a>` for `#hash`/`mailto:`, `<button>` otherwise. Variants: `primary`, `secondary`, `white`, `outline`.
+
+### Navbar
+
+Solid `bg-[#08102a]` (no opacity/blur). Uses `usePathname()` for active link detection. Nav links are route-based (`/servizi`, `/faq`), not hash anchors. Active state: `border-t-2 border-[#3d6aff] text-[#3d6aff]`.
+
+### Subpages
+
+App Router subpages exist at `app/servizi/page.tsx` and `app/faq/page.tsx` (placeholders). Add new pages under `app/[route]/page.tsx`.
+
+### HowWeWork / WhyQuestly
+
+These sections exist as components but are **not rendered** in `app/page.tsx`.
