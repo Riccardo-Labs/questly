@@ -38,7 +38,7 @@ function ServiceCard({ item, index }: { item: ServiceItem; index: number }) {
 /** Sezione "Cosa Facciamo": griglia 3 colonne con le aree di servizio (Web, Marketing, AI). */
 export function Services() {
   return (
-    <section id="servizi" className="bg-bg-light py-24">
+    <section id="servizi" className="bg-bg-light py-24 min-h-[90vh] flex flex-col justify-center">
       <Container>
       <Badge variant="light" className="mb-6">{services.label}</Badge>
       <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px] mb-4 text-text-body">

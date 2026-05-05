@@ -26,7 +26,7 @@ function ProblemCard({ item, index }: { item: ProblemType; index: number }) {
 /** Sezione "Il Problema": griglia 2x2 con i 4 pain point comuni delle PMI. */
 export function Problem() {
   return (
-    <section id="problema" className="bg-bg-light py-24">
+    <section id="problema" className="bg-bg-light py-24 min-h-[90vh] flex flex-col justify-center">
       <Container>
       <Badge variant="light" className="mb-6">Il problema</Badge>
       <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px] mb-4 text-text-body">

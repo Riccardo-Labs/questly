@@ -7,10 +7,10 @@ import { footer } from '@/lib/content'
 export function Footer() {
   return (
     <footer className="bg-bg border-t border-subtle py-8">
-      <Container className="flex flex-col md:flex-row justify-between items-center gap-3">
-      <Logo height={24} className="text-white" />
-      <p className="text-muted text-xs">{footer.copyright}</p>
-      <div className="flex gap-4">
+      <Container className="flex flex-col md:flex-row items-center gap-3">
+      <p className="text-muted text-xs flex-1">{footer.copyright}</p>
+      <p className="text-muted text-xs">P. IVA 13325480963</p>
+      <div className="flex gap-4 flex-1 justify-end">
         {footer.links.map(link => (
           <Link
             key={link.href}

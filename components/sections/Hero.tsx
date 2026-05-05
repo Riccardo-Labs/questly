@@ -138,18 +138,10 @@ export function Hero({ onContactOpen }: { onContactOpen: () => void }) {
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-5">
-                {hero.ctas.map(cta =>
-                  cta.variant === 'primary' ? (
-                    <Button key={cta.label} variant="primary" onClick={onContactOpen} className="!py-2.5 !px-5 !text-sm">
-                      {cta.label}
-                    </Button>
-                  ) : (
-                    <Button key={cta.label} variant="secondary" href={cta.href} className="!py-2.5 !px-5 !text-sm">
-                      {cta.label}
-                    </Button>
-                  )
-                )}
+              <div>
+                <Button variant="primary" onClick={onContactOpen} className="!py-4 !px-10 !text-base">
+                  {hero.ctas[0].label}
+                </Button>
               </div>
             </motion.div>
 

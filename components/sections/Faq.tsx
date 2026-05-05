@@ -13,7 +13,7 @@ function FaqRow({ item, isOpen, onToggle }: { item: FaqItem; isOpen: boolean; on
     <div className="border-b border-subtle">
       <button
         onClick={onToggle}
-        className="w-full flex justify-between items-center gap-4 py-5 text-left text-text text-sm font-semibold hover:text-blue transition-colors"
+        className="w-full flex justify-between items-center gap-4 py-5 text-left text-muted text-sm font-semibold hover:text-blue transition-colors"
         aria-expanded={isOpen}
       >
         {item.q}
@@ -39,7 +39,7 @@ export function Faq() {
   const toggle = (i: number) => setOpenIdx(prev => (prev === i ? null : i))
 
   return (
-    <section id="faq" className="bg-bg py-24">
+    <section id="faq" className="bg-bg py-24 min-h-[90vh] flex flex-col justify-center">
       <Container>
       <motion.div
         className="max-w-3xl mx-auto text-center"
@@ -48,7 +48,6 @@ export function Faq() {
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.5 }}
       >
-        <Badge className="mb-6">{faq.label}</Badge>
         <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px]">
           {faq.headline}
         </h2>

@@ -53,7 +53,7 @@ function Terminal() {
 /** Sezione "La Soluzione": lista features a sinistra, terminale animato a destra. Layout 2 colonne su desktop. */
 export function Solution() {
   return (
-    <section className="bg-bg2 py-24">
+    <section id="soluzione" className="bg-bg2 py-24 min-h-[90vh] flex flex-col justify-center">
       <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <motion.div
