@@ -30,9 +30,9 @@ export function Problem() {
       <Container>
       <Badge variant="light" className="mb-6">Il problema</Badge>
       <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px] mb-4 text-text-body">
-        Ti riconosci in una<br />di queste situazioni?
+        Ti riconosci in una di queste situazioni?
       </h2>
-      <p className="text-text-secondary text-base max-w-md mb-14 leading-relaxed">
+      <p className="text-text-secondary text-base max-w-full mb-14 leading-relaxed">
         Sono le difficoltà più comuni che sentiamo ogni giorno da imprenditori e PMI che vogliono crescere online.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border-light border border-border-light rounded-xl overflow-hidden">

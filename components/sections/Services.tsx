@@ -44,7 +44,7 @@ export function Services() {
       <h2 className="font-extrabold text-[clamp(2.2rem,4vw,3.5rem)] leading-tight tracking-[-1.5px] mb-4 text-text-body">
         {services.headline}
       </h2>
-      <p className="text-text-secondary text-base max-w-md mb-14 leading-relaxed">{services.sub}</p>
+      <p className="text-text-secondary text-base max-w-full mb-14 leading-relaxed">{services.sub}</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.items.map((item, i) => (
           <ServiceCard key={item.tag} item={item} index={i} />
