@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { IconButton } from '@/components/ui/IconButton'
 import { Badge } from '@/components/ui/Badge'
 import { Container } from '@/components/ui/Container'
 import { services } from '@/lib/content'
@@ -18,9 +19,7 @@ function ServiceCard({ item, index }: { item: ServiceItem; index: number }) {
     >
       <p className="font-mono text-[10px] text-blue tracking-wider mb-4">{item.tag}</p>
       <div className="h-px bg-border-light mb-6" />
-      <div className="w-12 h-12 bg-blue/10 border border-accent rounded-xl flex items-center justify-center text-xl mb-6">
-        {item.icon}
-      </div>
+      <IconButton icon={item.icon} size="lg" className="mb-6" />  
       <h3 className="font-bold text-lg mb-3 tracking-tight text-text-body">{item.title}</h3>
       <p className="text-text-secondary text-xs leading-relaxed mb-6 flex-1">{item.body}</p>
       <ul className="flex flex-col gap-2 list-none">

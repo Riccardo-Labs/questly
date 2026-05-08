@@ -26,9 +26,6 @@ export function FinalCta({ onContactOpen }: { onContactOpen: () => void }) {
           <Button variant="primary" onClick={onContactOpen}>
             {finalCta.primary}
           </Button>
-          <Button variant="outline" href="tel:+39">
-            {finalCta.secondary}
-          </Button>
         </div>
       </motion.div>
       </Container>

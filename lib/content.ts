@@ -86,22 +86,22 @@ export const solution: SolutionContent = {
   sub: 'Non vendiamo pacchetti preconfezionati. Capiamo la tua situazione e costruiamo un percorso pratico con obiettivi chiari.',
   features: [
     {
-      icon: '🌐',
+      icon: 'globe',
       title: 'Un sito che lavora per te',
       body: 'Ogni pagina è progettata con un obiettivo preciso: spingere il visitatore a contattarti. Non solo estetica — architettura, velocità e testi orientati alla conversione.',
     },
     {
-      icon: '📍',
+      icon: 'location',
       title: 'Visibilità locale su Google',
       body: 'Ottimizziamo il tuo profilo Google Business Profile e il tuo sito per le ricerche locali. Quando qualcuno cerca il tuo servizio nella tua città, vuoi essere tu il primo risultato.',
     },
     {
-      icon: '🤖',
+      icon: 'robot',
       title: 'AI senza complicazioni',
       body: 'Chatbot che risponde h24, reminder automatici, follow-up sui lead. Strumenti concreti integrati nei tuoi flussi di lavoro — senza che tu debba capire come funzionano dentro.',
     },
     {
-      icon: '⚙️',
+      icon: 'settings',
       title: 'Processi più veloci, meno errori',
       body: 'Identifichiamo dove perdi tempo e costruiamo automazioni su misura. Il risultato: meno lavoro manuale, più tempo per i clienti.',
     },
@@ -133,7 +133,7 @@ export const services: ServicesContent = {
   items: [
     {
       tag: '01 / Siti Web',
-      icon: '🌐',
+      icon: 'globe',
       title: 'Siti web che convertono',
       body: 'Non costruiamo siti per farli belli. Li costruiamo perché portino clienti. Ogni scelta — testi, struttura, velocità — serve a trasformare il visitatore in un contatto.',
       list: [
@@ -145,7 +145,7 @@ export const services: ServicesContent = {
     },
     {
       tag: '02 / Presenza Locale',
-      icon: '📍',
+      icon: 'location',
       title: 'Google Business e SEO locale',
       body: 'La maggior parte dei tuoi potenziali clienti ti cerca su Google prima di chiamarti. Ottimizziamo la tua presenza locale perché tu sia trovato — non il concorrente.',
       list: [
@@ -157,7 +157,7 @@ export const services: ServicesContent = {
     },
     {
       tag: '03 / AI & Automazioni',
-      icon: '🤖',
+      icon: 'robot',
       title: 'Automazioni AI su misura',
       body: 'Analizziamo i tuoi processi e identifichiamo dove puoi recuperare tempo. Poi costruiamo le automazioni — chatbot, workflow, integrazioni — e te le consegniamo pronte all\'uso.',
       list: [
@@ -204,10 +204,10 @@ export const whyQuestly: WhyContent = {
   sub2: 'Lavoriamo con poche aziende alla volta, perché ognuna merita attenzione reale. Il tuo successo è il nostro unico caso studio che conta.',
   cta: 'Parlaci del tuo progetto →',
   features: [
-    { icon: '🎯', title: 'Risultati misurabili', body: 'Ogni azione ha un obiettivo preciso. Sai sempre cosa stiamo facendo e perché.' },
-    { icon: '💬', title: 'Zero gergo tecnico', body: 'Ti spieghiamo tutto in italiano chiaro. Nessun termine che devi googlare dopo la call.' },
-    { icon: '🔧', title: 'Su misura, sempre', body: 'Nessun pacchetto standard calato dall\'alto. Il percorso si costruisce attorno alla tua realtà.' },
-    { icon: '🔑', title: 'Ownership completa', body: 'Dominio, hosting, account Google — tutto tuo. Non dipendi da noi per esistere online.' },
+    { icon: 'target', title: 'Risultati misurabili', body: 'Ogni azione ha un obiettivo preciso. Sai sempre cosa stiamo facendo e perché.' },
+    { icon: 'chat', title: 'Zero gergo tecnico', body: 'Ti spieghiamo tutto in italiano chiaro. Nessun termine che devi googlare dopo la call.' },
+    { icon: 'wrench', title: 'Su misura, sempre', body: 'Nessun pacchetto standard calato dall\'alto. Il percorso si costruisce attorno alla tua realtà.' },
+    { icon: 'shield', title: 'Ownership completa', body: 'Dominio, hosting, account Google — tutto tuo. Non dipendi da noi per esistere online.' },
   ],
 }
 
@@ -278,9 +278,9 @@ export const serviceDetails: ServiceData[] = [
     title: 'Siti web che<br /><em>convertono.</em>',
     desc: 'Progettiamo e sviluppiamo siti web su misura, ottimizzati per trasformare i visitatori in clienti. Niente template generici: ogni sito è costruito attorno ai tuoi obiettivi di business.',
     features: [
-      { icon: '⬡', title: 'Design su misura', text: 'Interfacce progettate partendo dai tuoi utenti, non da template preconfezionati.' },
-      { icon: '⚡', title: 'Velocità e performance', text: 'Ottimizzazione Core Web Vitals per ranking migliori e utenti più soddisfatti.' },
-      { icon: '↗', title: 'Conversione al centro', text: 'CTA, form e struttura pensati per massimizzare i contatti generati.' },
+      { icon: 'pen-tool', title: 'Design su misura', text: 'Interfacce progettate partendo dai tuoi utenti, non da template preconfezionati.' },
+      { icon: 'bolt', title: 'Velocità e performance', text: 'Ottimizzazione Core Web Vitals per ranking migliori e utenti più soddisfatti.' },
+      { icon: 'trending-up', title: 'Conversione al centro', text: 'CTA, form e struttura pensati per massimizzare i contatti generati.' },
     ],
     stats: [
       { val: '+220%', lbl: 'conversioni medie' },
@@ -292,9 +292,9 @@ export const serviceDetails: ServiceData[] = [
     title: 'Visibilità su<br /><em>Google Maps.</em>',
     desc: 'Ottimizziamo la tua presenza locale su Google, Maps e nei risultati di ricerca geo-targettizzati.',
     features: [
-      { icon: '◎', title: 'Google Business Profile', text: 'Setup e ottimizzazione completa della scheda Google per massimizzare le impressioni.' },
-      { icon: '★', title: 'Gestione recensioni', text: 'Strategie per aumentare le recensioni positive e rispondere in modo professionale.' },
-      { icon: '⌖', title: 'Citazioni locali', text: 'Costruzione di citazioni coerenti su directory e portali di settore.' },
+      { icon: 'map-pinned', title: 'Google Business Profile', text: 'Setup e ottimizzazione completa della scheda Google per massimizzare le impressioni.' },
+      { icon: 'star', title: 'Gestione recensioni', text: 'Strategie per aumentare le recensioni positive e rispondere in modo professionale.' },
+      { icon: 'target', title: 'Citazioni locali', text: 'Costruzione di citazioni coerenti su directory e portali di settore.' },
     ],
     stats: [
       { val: 'Top 3', lbl: 'posizione Maps media' },
@@ -306,9 +306,9 @@ export const serviceDetails: ServiceData[] = [
     title: 'Automazioni che<br /><em>lavorano per te.</em>',
     desc: 'Integriamo flussi di lavoro automatizzati e strumenti AI nei tuoi processi.',
     features: [
-      { icon: '⬡', title: 'Automazione lead', text: 'Ogni nuovo contatto viene accolto, qualificato e indirizzato automaticamente.' },
-      { icon: '◷', title: 'Risparmio di tempo', text: 'Elimina le attività ripetitive: follow-up, reminder, report e molto altro.' },
-      { icon: '⚙', title: 'Integrazione tools', text: 'Colleghiamo i tuoi strumenti esistenti: CRM, email, calendario, WhatsApp.' },
+      { icon: 'workflow', title: 'Automazione lead', text: 'Ogni nuovo contatto viene accolto, qualificato e indirizzato automaticamente.' },
+      { icon: 'clock', title: 'Risparmio di tempo', text: 'Elimina le attività ripetitive: follow-up, reminder, report e molto altro.' },
+      { icon: 'plug', title: 'Integrazione tools', text: 'Colleghiamo i tuoi strumenti esistenti: CRM, email, calendario, WhatsApp.' },
     ],
     stats: [
       { val: '12h', lbl: 'risparmiate/settimana' },
@@ -320,9 +320,9 @@ export const serviceDetails: ServiceData[] = [
     title: 'Processi<br /><em>più intelligenti.</em>',
     desc: 'Analizziamo i tuoi flussi operativi e li riprogettiamo per eliminare colli di bottiglia.',
     features: [
-      { icon: '⬡', title: 'Analisi dei processi', text: 'Mappatura completa dei flussi esistenti per identificare inefficienze e opportunità.' },
-      { icon: '↻', title: 'Redesign operativo', text: 'Riprogettazione dei processi con focus su velocità, qualità e scalabilità.' },
-      { icon: '◈', title: 'Monitoraggio KPI', text: 'Dashboard e report per tenere tutto sotto controllo in tempo reale.' },
+      { icon: 'scan', title: 'Analisi dei processi', text: 'Mappatura completa dei flussi esistenti per identificare inefficienze e opportunità.' },
+      { icon: 'refresh-cw', title: 'Redesign operativo', text: 'Riprogettazione dei processi con focus su velocità, qualità e scalabilità.' },
+      { icon: 'bar-chart', title: 'Monitoraggio KPI', text: 'Dashboard e report per tenere tutto sotto controllo in tempo reale.' },
     ],
     stats: [
       { val: '-40%', lbl: 'costi operativi' },

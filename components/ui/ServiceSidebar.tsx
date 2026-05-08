@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { IconButton } from "@/components/ui/IconButton";
 import styles from "./ServiceSidebar.module.css";
 import type { ServiceData } from "@/types";
 
@@ -60,7 +61,7 @@ export default function ServiceSidebar({ service, onClose }: ServiceSidebarProps
               <ul className={styles.featureList}>
                 {service.features.map((f, i) => (
                   <li key={i} className={styles.featureItem}>
-                    <div className={styles.featureIcon}>{f.icon}</div>
+                    <div className={styles.featureIcon}><IconButton icon={f.icon} size="sm" /></div>
                     <div>
                       <p className={styles.featureTitle}>{f.title}</p>
                       <p className={styles.featureText}>{f.text}</p>

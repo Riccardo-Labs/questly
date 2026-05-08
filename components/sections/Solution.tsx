@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/Badge'
 import { Container } from '@/components/ui/Container'
+import { IconButton } from '@/components/ui/IconButton'
 import { solution } from '@/lib/content'
 import type { TerminalLine } from '@/types'
 
@@ -74,9 +75,7 @@ export function Solution() {
                 key={f.title}
                 className={`flex gap-4 items-start py-6 ${i < solution.features.length - 1 ? 'border-b border-subtle' : ''}`}
               >
-                <div className="w-9 h-9 bg-blue/10 border border-accent rounded-lg flex items-center justify-center text-base flex-shrink-0">
-                  {f.icon}
-                </div>
+                <IconButton icon={f.icon} size="md" className="flex-shrink-0" />
                 <div>
                   <h4 className="font-bold text-sm mb-1">{f.title}</h4>
                   <p className="text-muted text-xs leading-relaxed">{f.body}</p>

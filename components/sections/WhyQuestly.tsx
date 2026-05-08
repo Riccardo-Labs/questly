@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { IconButton } from '@/components/ui/IconButton' 
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
@@ -38,6 +39,7 @@ export function WhyQuestly({ onContactOpen }: { onContactOpen: () => void }) {
           <p className="text-muted text-sm leading-relaxed mb-10">{whyQuestly.sub2}</p>
           <Button variant="primary" onClick={onContactOpen}>{whyQuestly.cta}</Button>
         </motion.div>
+        
 
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 gap-4"
